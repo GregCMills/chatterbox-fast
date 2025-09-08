@@ -1,7 +1,7 @@
 services:
   chatterbox:
     build:
-      context: /workspace
+      context: .
       dockerfile: Dockerfile
     image: chatterbox-tts:latest
     ports:
@@ -14,7 +14,7 @@ services:
       - TORCH_HOME=/data/torch
     volumes:
       - type: bind
-        source: /workspace
+        source: .
         target: /app
       - type: volume
         source: chatterbox_data
