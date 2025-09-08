@@ -31,7 +31,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 # Use official torch CUDA wheels matching CUDA 12.1
 RUN pip install --upgrade pip setuptools wheel && \
     pip install --index-url https://download.pytorch.org/whl/cu121 \
-      torch==2.6.0 torchaudio==2.6.0 && \
+      torch==2.5.1 torchaudio==2.5.1 && \
     pip install -e .
 
 # Gradio listens on 7860
